@@ -1,0 +1,65 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow">
+            <div class="card-header">
+                <h4>Thêm mới hồ sơ</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+
+                    <form [formGroup]="addform" (submit)="onSubmit()">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Họ Và Tên</label>
+                                <div class="col-md-12">
+                                    <input class="form-control" id="nameProduct" type="text" placeholder="Tên Sản Phẩm" (input)="CreateSlug()" formControlName="name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Mã Sinh Viên</label>
+                                <div class="col-md-12">
+                                    <input class="form-control"  formControlName="slug" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Ngày Sinh</label>
+                                <div class="col-md-12">
+                                    <input class="form-control" placeholder="Giá sản phẩm" formControlName="price">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Quê Quán</label>
+                                <div class="col-md-12">
+                                    <input class="form-control" placeholder="Số Lượng" formControlName="amount">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Kết Quả Thi</label>
+                                <div class="col-md-12">
+                                    <input class="form-control"  placeholder="Số Lượng" formControlName="amount">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Nguyện Vọng</label>
+                                <div class="col-md-12">
+                                    <textarea class="form-control tinymce" cols="20" formControlName="decriper" placeholder="Miêu tả" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            <div class="bu-group">
+                                <div class="form-group-center" id="text-center">
+                                    <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Tạo mới </button>
+                                    <a href="admin/product" class="btn btn-danger"><i class="fa fa-times"></i> Hủy bỏ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
